@@ -21,25 +21,28 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
-    Route::get('/dashboard', function() {
+    Route::get('/dashboard', function () {
         return view('pages.dashboard');
     })->name('pages.dashboard');
 
-    Route::get('/inventory/items', [ItemController::class, 'index'])->name('items.index');
-    Route::get('/inventory/items/create', [ItemController::class, 'create'])->name('items.create');
-    Route::post('/inventory/items', [ItemController::class, 'store'])->name('items.store');
-    Route::get('/inventory/items/{item}', [ItemController::class, 'show'])->name('items.show');
-    Route::get('/inventory/items/{item}/edit', [ItemController::class, 'edit'])->name('items.edit');
-    Route::patch('/inventory/items/{item}', [ItemController::class, 'update'])->name('items.update');
-    Route::delete('/inventory/items/{item}', [ItemController::class, 'destroy'])->name('items.destroy');
+    Route::prefix('inventory')->group(function () {
+        Route::get('/items', [ItemController::class, 'index'])->name('items.index');
+        Route::get('/items/create', [ItemController::class, 'create'])->name('items.create');
+        Route::post('/items', [ItemController::class, 'store'])->name('items.store');
+        Route::get('/items/{item}', [ItemController::class, 'show'])->name('items.show');
+        Route::get('/items/{item}/edit', [ItemController::class, 'edit'])->name('items.edit');
+        Route::patch('/items/{item}', [ItemController::class, 'update'])->name('items.update');
+        Route::delete('/items/{item}', [ItemController::class, 'destroy'])->name('items.destroy');
 
-    Route::get('/inventory/locations', [InventoryLocationController::class, 'index'])->name('locations.index');
-    Route::get('/inventory/locations/create', [InventoryLocationController::class, 'create'])->name('locations.create');
-    Route::post('/inventory/locations', [InventoryLocationController::class, 'store'])->name('locations.store');
-    Route::get('/inventory/locations/{inventoryLocation}', [InventoryLocationController::class, 'show'])->name('locations.show');
-    Route::get('/inventory/locations/{inventoryLocation}/edit', [InventoryLocationController::class, 'edit'])->name('locations.edit');
-    Route::patch('/inventory/locations/{inventoryLocation}', [InventoryLocationController::class, 'update'])->name('locations.update');
-    Route::delete('/inventory/locations/{inventoryLocation}', [InventoryLocationController::class, 'destroy'])->name('locations.destroy');
+        Route::get('/locations', [InventoryLocationController::class, 'index'])->name('locations.index');
+        Route::get('/locations/create', [InventoryLocationController::class, 'create'])->name('locations.create');
+        Route::post('/locations', [InventoryLocationController::class, 'store'])->name('locations.store');
+        Route::get('/locations/{inventoryLocation}', [InventoryLocationController::class, 'show'])->name('locations.show');
+        Route::get('/locations/{inventoryLocation}/edit', [InventoryLocationController::class, 'edit'])->name('locations.edit');
+        Route::patch('/locations/{inventoryLocation}', [InventoryLocationController::class, 'update'])->name('locations.update');
+        Route::delete('/locations/{inventoryLocation}', [InventoryLocationController::class, 'destroy'])->name('locations.destroy');
+    });
+
 
     Route::get('/companies', [CompanyController::class, 'index'])->name('companies.index');
     Route::get('/companies/create', [CompanyController::class, 'create'])->name('companies.create');
