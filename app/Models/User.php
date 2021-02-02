@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
@@ -60,12 +61,34 @@ class User extends Authenticatable
     ];
 
     /**
+     * Return all of the users inventory items.
+     *
+     * @return HasMany
+     */
+    public function getAllInventoryItems()
+    {
+        return $this->hasMany(Item::with('item_infos'));
+    }
+
+    /**
      * Return all of the inventory locations for the user.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return HasMany
      */
     public function getAllInventoryLocations()
     {
         return $this->hasMany(InventoryLocation::class);
+    }
+
+    /**
+     * Return all of the notifications related to the user.
+     *
+     * @return HasMany
+     */
+    public function getAllNotifications()
+    {
+        // TODO: Make a migration and then handle this to return data from it.
+
+        return [];
     }
 }

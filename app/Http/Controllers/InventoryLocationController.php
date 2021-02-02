@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\InventoryLocation;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class InventoryLocationController extends Controller
 {
@@ -15,7 +16,10 @@ class InventoryLocationController extends Controller
      */
     public function index()
     {
-        $inventoryLocations = User::find(Auth::user()->id)->getAllInventoryLocations;
+        //$inventoryLocations = User::find(Auth::user()->id)->getAllInventoryLocations;
+        $inventoryLocations = InventoryLocation::all();
+
+        return view('locations.index', ['inventoryLocations' => $inventoryLocations]);
     }
 
     /**
@@ -47,7 +51,7 @@ class InventoryLocationController extends Controller
      */
     public function show(InventoryLocation $inventoryLocation)
     {
-        //
+        return view('locations.show', ['location' => $inventoryLocation]);
     }
 
     /**

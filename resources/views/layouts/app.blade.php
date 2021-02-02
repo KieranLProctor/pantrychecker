@@ -8,7 +8,6 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
     <!-- Styles -->
@@ -150,11 +149,35 @@
                     </form>
                 </div>
                 <div class="ml-4 flex items-center md:ml-6">
-                    <button
-                        class="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        <span class="sr-only">View notifications</span>
-                        <x-heroicon-o-bell class="h-6 w-6"/>
-                    </button>
+                    <!-- Notifications dropdown -->
+                    <div class="ml-3 sm:flex sm:items-center">
+                        <x-jet-dropdown align="right" width="48">
+                            <x-slot name="trigger">
+                                <button
+                                    class="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                    <span class="sr-only">View notifications</span>
+                                    <x-heroicon-o-bell class="h-6 w-6"/>
+                                </button>
+                            </x-slot>
+
+                            <x-slot name="content">
+                                <!-- Notifications -->
+                                <div class="block px-4 py-2 text-xs text-gray-400">
+                                    {{ __('Recent Notifications') }}
+                                </div>
+
+                                <div class="border-t border-gray-100 dark:border-gray-600">
+                                    <x-jet-dropdown-link href="{{ route('notifications.index') }}">
+                                        <div class="flex flex-row items-center">
+                                            {{ __('View All') }}
+                                        </div>
+                                    </x-jet-dropdown-link>
+                                </div>
+
+                            </x-slot>
+                        </x-jet-dropdown>
+                    </div>
+
 
                     <!-- Profile dropdown -->
                     <div class="ml-3 sm:flex sm:items-center">
