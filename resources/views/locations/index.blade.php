@@ -1,6 +1,12 @@
 <x-app-layout>
     <x-slot name="header">
         {{ __('Locations') }}
+
+        <div class="float-right">
+            <a href=""
+               class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">Add
+                Location</a>
+        </div>
     </x-slot>
 
     <div class="py-4">
@@ -48,7 +54,8 @@
                                             Admin
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                            <a href="{{ route('locations.show', $location) }}" class="text-gray-600 hover:text-gray-900">
+                                            <a href="{{ route('locations.show', $location) }}"
+                                               class="text-gray-600 hover:text-gray-900">
                                                 View
                                             </a>
                                         </td>
