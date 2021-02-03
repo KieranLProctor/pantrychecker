@@ -81,6 +81,16 @@ class User extends Authenticatable
     }
 
     /**
+     * Return all of the users items.
+     *
+     * @return HasMany
+     */
+    public function getAllItems()
+    {
+        return $this->hasMany(Item::class);
+    }
+
+    /**
      * Return all of the notifications related to the user.
      *
      * @return HasMany

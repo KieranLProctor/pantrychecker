@@ -9,8 +9,7 @@
                 <div class="p-5">
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
-                            <x-heroicon-o-scale
-                                class="h-6 w-6 text-gray-400"/>
+                            <x-heroicon-o-scale class="h-6 w-6 text-gray-400"/>
                         </div>
                         <div class="ml-5 w-0 flex-1">
                             <dl>
@@ -32,8 +31,7 @@
                 <div class="p-5">
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
-                            <x-heroicon-o-location-marker
-                                class="h-6 w-6 text-gray-400"/>
+                            <x-heroicon-o-location-marker class="h-6 w-6 text-gray-400"/>
                         </div>
                         <div class="ml-5 w-0 flex-1">
                             <dl>

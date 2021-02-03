@@ -15,10 +15,15 @@ class CreateInventoryLocationsTable extends Migration
     {
         Schema::create('inventory_locations', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->string('name');
             $table->text('description')->nullable();
             $table->string('image_url')->nullable();
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users');
         });
     }
 
