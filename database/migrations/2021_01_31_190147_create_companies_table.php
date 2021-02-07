@@ -16,11 +16,11 @@ class CreateCompaniesTable extends Migration
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('logo_url');
-            $table->text('description');
+            $table->string('logo_url')->nullable();
+            $table->text('description')->nullable();
             $table->string('type');
-            $table->string('website_url');
-            $table->string('email');
+            $table->string('website_url')->nullable();
+            $table->string('email')->nullable();
             $table->unsignedBigInteger('address_id');
             $table->timestamps();
 

@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\InventoryLocation;
+use App\Models\Location;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 
-class InventoryLocationController extends Controller
+class LocationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,9 +18,9 @@ class InventoryLocationController extends Controller
      */
     public function index()
     {
-        $inventoryLocations = User::find(Auth::id())->getAllInventoryLocations;
+        $locations = User::find(Auth::id())->locations;
 
-        return view('locations.index', ['inventoryLocations' => $inventoryLocations]);
+        return view('locations.index', ['locations' => $locations]);
     }
 
     /**
@@ -46,7 +46,7 @@ class InventoryLocationController extends Controller
             'description' => ['max:255'],
         ]);
 
-        InventoryLocation::create([
+        Location::create([
             'user_id' => Auth::id(),
             'name' => $request['name'],
             'description' => $request['description'],
@@ -58,21 +58,21 @@ class InventoryLocationController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param InventoryLocation $inventoryLocation
+     * @param Location $location
      * @return Response
      */
-    public function show(InventoryLocation $inventoryLocation)
+    public function show(Location $location)
     {
-        return view('locations.show', ['location' => $inventoryLocation]);
+        return view('locations.show', ['location' => $location]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param InventoryLocation $inventoryLocation
+     * @param Location $location
      * @return Response
      */
-    public function edit(InventoryLocation $inventoryLocation)
+    public function edit(Location $location)
     {
         //
     }
@@ -81,10 +81,10 @@ class InventoryLocationController extends Controller
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param InventoryLocation $inventoryLocation
+     * @param Location $location
      * @return Response
      */
-    public function update(Request $request, InventoryLocation $inventoryLocation)
+    public function update(Request $request, Location $location)
     {
         //
     }
@@ -92,10 +92,10 @@ class InventoryLocationController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param InventoryLocation $inventoryLocation
+     * @param Location $location
      * @return Response
      */
-    public function destroy(InventoryLocation $inventoryLocation)
+    public function destroy(Location $location)
     {
         //
     }

@@ -23,7 +23,7 @@ class CreateItemInfosTable extends Migration
             $table->dateTime('last_used')->nullable();
             $table->integer('purchase_price');
             $table->integer('msrp')->nullable();
-            $table->unsignedBigInteger('inventory_location_id');
+            $table->unsignedBigInteger('location_id');
             $table->timestamps();
 
             $table->foreign('user_id')
@@ -38,9 +38,9 @@ class CreateItemInfosTable extends Migration
                 ->references('id')
                 ->on('companies');
 
-            $table->foreign('inventory_location_id')
+            $table->foreign('location_id')
                 ->references('id')
-                ->on('inventory_locations');
+                ->on('locations');
         });
     }
 

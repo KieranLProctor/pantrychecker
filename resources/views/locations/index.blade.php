@@ -37,7 +37,7 @@
                             </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
-                            @if($inventoryLocations->isEmpty())
+                            @if($inventoryLocations->count())
                                 <tr>OH NO IT LOOKS LIKE THERE AREN'T ANY LOCATIONS</tr>
                             @else
                                 @foreach($inventoryLocations as $location)
@@ -53,7 +53,7 @@
                                             </div>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                            Admin
+                                            {{ $location->items->count() }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                             <a href="{{ route('locations.show', $location) }}"

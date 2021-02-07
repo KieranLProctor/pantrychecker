@@ -15,8 +15,8 @@ class ItemInfo extends Model
      *
      * @return HasMany
      */
-    public function getAllLocations()
+    public function locations()
     {
-        return $this->hasMany(InventoryLocation::class);
+        return $this->hasMany(Location::class);
     }
 }

@@ -40,7 +40,7 @@
                                 </dt>
                                 <dd>
                                     <div class="text-lg font-medium text-gray-900">
-                                        3
+                                        {{ $location->items->count() }}
                                     </div>
                                 </dd>
                             </dl>
@@ -87,32 +87,7 @@
                                     </tr>
                                     </thead>
                                     <tbody class="bg-white divide-y divide-gray-200">
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap">
-                                            <div class="text-sm font-medium text-gray-900">
-                                                Jane Cooper
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap">
-                                            <div class="text-sm text-gray-500">Optimization</div>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap">
-                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                  Active
-                </span>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                            Admin
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                            12345678
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                            <a href="{{ route('items.show', 1)}}" class="text-gray-600 hover:text-gray-900">Edit</a>
-                                        </td>
-                                    </tr>
-
-                                    <!-- More items... -->
+                                    @each('livewire.inventory-item-table', $location->getAllItems, 'item', 'livewire.inventory-item-table-empty')
                                     </tbody>
                                 </table>
                             </div>

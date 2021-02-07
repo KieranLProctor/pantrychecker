@@ -47,7 +47,7 @@
                                 </dt>
                                 <dd>
                                     <div class="text-lg font-medium text-gray-900">
-                                        {{ Auth::user()->getAllItems->count() }}
+                                        {{ Auth::user()->items->count() }}
                                     </div>
                                 </dd>
                             </dl>
@@ -76,7 +76,7 @@
                                 </dt>
                                 <dd>
                                     <div class="text-lg font-medium text-gray-900">
-                                        {{ Auth::user()->getAllInventoryLocations->count() }}
+                                        {{ Auth::user()->locations->count() }}
                                     </div>
                                 </dd>
                             </dl>

@@ -65,9 +65,11 @@ class User extends Authenticatable
      *
      * @return HasMany
      */
-    public function getAllInventoryItems()
+    public function items()
     {
-        return $this->hasMany(Item::with('item_infos'));
+        // TODO: Add the item information and location.
+
+        return $this->hasMany(Item::class);
     }
 
     /**
@@ -75,19 +77,9 @@ class User extends Authenticatable
      *
      * @return HasMany
      */
-    public function getAllInventoryLocations()
+    public function locations()
     {
-        return $this->hasMany(InventoryLocation::class);
-    }
-
-    /**
-     * Return all of the users items.
-     *
-     * @return HasMany
-     */
-    public function getAllItems()
-    {
-        return $this->hasMany(Item::class);
+        return $this->hasMany(Location::class);
     }
 
     /**
@@ -95,7 +87,7 @@ class User extends Authenticatable
      *
      * @return HasMany
      */
-    public function getAllNotifications()
+    public function notifications()
     {
         // TODO: Make a migration and then handle this to return data from it.
 

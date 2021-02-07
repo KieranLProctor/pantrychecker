@@ -20,8 +20,8 @@ class CreateItemsTable extends Migration
             $table->unsignedBigInteger('item_type_id');
             $table->text('description')->nullable();
             $table->unsignedBigInteger('company_id');
-            $table->unsignedBigInteger('size_id');
-            $table->string('sku');
+            $table->unsignedBigInteger('size_id')->nullable();
+            $table->string('sku')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')

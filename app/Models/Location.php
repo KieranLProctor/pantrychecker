@@ -5,8 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\DB;
 
-class InventoryLocation extends Model
+class Location extends Model
 {
     use HasFactory;
 
@@ -30,7 +31,7 @@ class InventoryLocation extends Model
         'user_id',
     ];
 
-    public function getUser()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }
@@ -38,10 +39,20 @@ class InventoryLocation extends Model
     /**
      * Get all of the items in a location.
      *
-     * @return HasMany
+     * @return
      */
-    public function getAllItems()
+    public function items()
     {
-        return $this->hasMany(Item::class);
+        //$items = Item::with(['item_infos'])->first();
+
+        $items = DB::table('items')
+            ->join('item_infos', 'items.id', '=', 'item_infos.item_id')
+            ->get();
+
+       // dd($items);
+
+        return $items;
+
+        //return $this->hasManyThrough(ItemInfo::class, Item::class);
     }
 }
