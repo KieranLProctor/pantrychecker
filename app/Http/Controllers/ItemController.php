@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ItemController extends Controller
 {
@@ -14,7 +16,9 @@ class ItemController extends Controller
      */
     public function index()
     {
-        return view('items.index');
+        $items = User::find(Auth::id())->items;
+
+        return view('items.index', ['items' => $items]);
     }
 
     /**

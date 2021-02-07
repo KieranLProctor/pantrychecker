@@ -67,6 +67,10 @@
                                         </th>
                                         <th scope="col"
                                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Location
+                                        </th>
+                                        <th scope="col"
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             Purchase Date
                                         </th>
                                         <th scope="col"
@@ -87,7 +91,7 @@
                                     </tr>
                                     </thead>
                                     <tbody class="bg-white divide-y divide-gray-200">
-                                    @each('livewire.inventory-item-table', $location->getAllItems, 'item', 'livewire.inventory-item-table-empty')
+                                    @each('livewire.item-table', $location->items, 'item', 'livewire.item-table-empty')
                                     </tbody>
                                 </table>
                             </div>

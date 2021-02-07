@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Support\Facades\DB;
 
 class Location extends Model
 {
@@ -39,20 +38,10 @@ class Location extends Model
     /**
      * Get all of the items in a location.
      *
-     * @return
+     * @return HasMany
      */
     public function items()
     {
-        //$items = Item::with(['item_infos'])->first();
-
-        $items = DB::table('items')
-            ->join('item_infos', 'items.id', '=', 'item_infos.item_id')
-            ->get();
-
-       // dd($items);
-
-        return $items;
-
-        //return $this->hasManyThrough(ItemInfo::class, Item::class);
+        return $this->hasMany(ItemInfo::class);
     }
 }

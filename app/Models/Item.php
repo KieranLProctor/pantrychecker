@@ -19,4 +19,14 @@ class Item extends Model
     {
         return $this->hasOne(ItemInfo::with('inventory_locations'));
     }
+
+    /**
+     * Return all of the locations that have this item.
+     *
+     * @return HasManyThrough
+     */
+    public function locations()
+    {
+        return $this->hasManyThrough(Location::class, ItemInfo::class);
+    }
 }

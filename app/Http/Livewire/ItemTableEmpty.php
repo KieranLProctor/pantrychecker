@@ -4,7 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-class InventoryItemTableEmpty extends Component
+class ItemTableEmpty extends Component
 {
     public function render()
     {
