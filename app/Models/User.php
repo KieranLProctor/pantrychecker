@@ -73,6 +73,16 @@ class User extends Authenticatable
     }
 
     /**
+     * Return the total value of items stored.
+     *
+     * @return int
+     */
+    public function totalItemsValue()
+    {
+        return $this->hasMany(ItemInfo::class)->sum('purchase_price');
+    }
+
+    /**
      * Return all of the inventory locations for the user.
      *
      * @return HasMany

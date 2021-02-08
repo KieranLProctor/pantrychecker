@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Country;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 
 class CountrySeeder extends Seeder
@@ -17,999 +18,1497 @@ class CountrySeeder extends Seeder
         $countries = [
             [
                 'name' => 'Afghanistan',
-                'code' => 'AF'
+                'code' => 'AF',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Åland Islands',
-                'code' => 'AX'
+                'code' => 'AX',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Albania',
-                'code' => 'AL'
+                'code' => 'AL',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Algeria',
-                'code' => 'DZ'
+                'code' => 'DZ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'American Samoa',
-                'code' => 'AS'
+                'code' => 'AS',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Andorra',
-                'code' => 'AD'
+                'code' => 'AD',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Angola',
-                'code' => 'AO'
+                'code' => 'AO',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Anguilla',
-                'code' => 'AI'
+                'code' => 'AI',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Antarctica',
-                'code' => 'AQ'
+                'code' => 'AQ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Antigua and Barbuda',
-                'code' => 'AG'
+                'code' => 'AG',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Argentina',
-                'code' => 'AR'
+                'code' => 'AR',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Armenia',
-                'code' => 'AM'
+                'code' => 'AM',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Aruba',
-                'code' => 'AW'
+                'code' => 'AW',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Australia',
-                'code' => 'AU'
+                'code' => 'AU',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Austria',
-                'code' => 'AT'
+                'code' => 'AT',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Azerbaijan',
-                'code' => 'AZ'
+                'code' => 'AZ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Bahamas',
-                'code' => 'BS'
+                'code' => 'BS',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Bahrain',
-                'code' => 'BH'
+                'code' => 'BH',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Bangladesh',
-                'code' => 'BD'
+                'code' => 'BD',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Barbados',
-                'code' => 'BB'
+                'code' => 'BB',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Belarus',
-                'code' => 'BY'
+                'code' => 'BY',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Belgium',
-                'code' => 'BE'
+                'code' => 'BE',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Belize',
-                'code' => 'BZ'
+                'code' => 'BZ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Benin',
-                'code' => 'BJ'
+                'code' => 'BJ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Bermuda',
-                'code' => 'BM'
+                'code' => 'BM',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Bhutan',
-                'code' => 'BT'
+                'code' => 'BT',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Bolivia, Plurinational State of',
-                'code' => 'BO'
+                'code' => 'BO',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Bonaire, Sint Eustatius and Saba',
-                'code' => 'BQ'
+                'code' => 'BQ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Bosnia and Herzegovina',
-                'code' => 'BA'
+                'code' => 'BA',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Botswana',
-                'code' => 'BW'
+                'code' => 'BW',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Bouvet Island',
-                'code' => 'BV'
+                'code' => 'BV',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Brazil',
-                'code' => 'BR'
+                'code' => 'BR',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'British Indian Ocean Territory',
-                'code' => 'IO'
+                'code' => 'IO',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Brunei Darussalam',
-                'code' => 'BN'
+                'code' => 'BN',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Bulgaria',
-                'code' => 'BG'
+                'code' => 'BG',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Burkina Faso',
-                'code' => 'BF'
+                'code' => 'BF',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Burundi',
-                'code' => 'BI'
+                'code' => 'BI',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Cambodia',
-                'code' => 'KH'
+                'code' => 'KH',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Cameroon',
-                'code' => 'CM'
+                'code' => 'CM',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Canada',
-                'code' => 'CA'
+                'code' => 'CA',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Cape Verde',
-                'code' => 'CV'
+                'code' => 'CV',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Cayman Islands',
-                'code' => 'KY'
+                'code' => 'KY',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Central African Republic',
-                'code' => 'CF'
+                'code' => 'CF',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Chad',
-                'code' => 'TD'
+                'code' => 'TD',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Chile',
-                'code' => 'CL'
+                'code' => 'CL',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'China',
-                'code' => 'CN'
+                'code' => 'CN',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Christmas Island',
-                'code' => 'CX'
+                'code' => 'CX',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Cocos (Keeling) Islands',
-                'code' => 'CC'
+                'code' => 'CC',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Colombia',
-                'code' => 'CO'
+                'code' => 'CO',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Comoros',
-                'code' => 'KM'
+                'code' => 'KM',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Congo',
-                'code' => 'CG'
+                'code' => 'CG',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Congo, the Democratic Republic of the',
-                'code' => 'CD'
+                'code' => 'CD',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Cook Islands',
-                'code' => 'CK'
+                'code' => 'CK',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Costa Rica',
-                'code' => 'CR'
+                'code' => 'CR',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Côte d\'Ivoire',
-                'code' => 'CI'
+                'code' => 'CI',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Croatia',
-                'code' => 'HR'
+                'code' => 'HR',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Cuba',
-                'code' => 'CU'
+                'code' => 'CU',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Curaçao',
-                'code' => 'CW'
+                'code' => 'CW',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Cyprus',
-                'code' => 'CY'
+                'code' => 'CY',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Czech Republic',
-                'code' => 'CZ'
+                'code' => 'CZ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Denmark',
-                'code' => 'DK'
+                'code' => 'DK',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Djibouti',
-                'code' => 'DJ'
+                'code' => 'DJ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Dominica',
-                'code' => 'DM'
+                'code' => 'DM',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Dominican Republic',
-                'code' => 'DO'
+                'code' => 'DO',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Ecuador',
-                'code' => 'EC'
+                'code' => 'EC',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Egypt',
-                'code' => 'EG'
+                'code' => 'EG',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'El Salvador',
-                'code' => 'SV'
+                'code' => 'SV',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Equatorial Guinea',
-                'code' => 'GQ'
+                'code' => 'GQ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Eritrea',
-                'code' => 'ER'
+                'code' => 'ER',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Estonia',
-                'code' => 'EE'
+                'code' => 'EE',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Ethiopia',
-                'code' => 'ET'
+                'code' => 'ET',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Falkland Islands (Malvinas)',
-                'code' => 'FK'
+                'code' => 'FK',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Faroe Islands',
-                'code' => 'FO'
+                'code' => 'FO',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Fiji',
-                'code' => 'FJ'
+                'code' => 'FJ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Finland',
-                'code' => 'FI'
+                'code' => 'FI',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'France',
-                'code' => 'FR'
+                'code' => 'FR',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'French Guiana',
-                'code' => 'GF'
+                'code' => 'GF',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'French Polynesia',
-                'code' => 'PF'
+                'code' => 'PF',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'French Southern Territories',
-                'code' => 'TF'
+                'code' => 'TF',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Gabon',
-                'code' => 'GA'
+                'code' => 'GA',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Gambia',
-                'code' => 'GM'
+                'code' => 'GM',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Georgia',
-                'code' => 'GE'
+                'code' => 'GE',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Germany',
-                'code' => 'DE'
+                'code' => 'DE',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Ghana',
-                'code' => 'GH'
+                'code' => 'GH',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Gibraltar',
-                'code' => 'GI'
+                'code' => 'GI',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Greece',
-                'code' => 'GR'
+                'code' => 'GR',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Greenland',
-                'code' => 'GL'
+                'code' => 'GL',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Grenada',
-                'code' => 'GD'
+                'code' => 'GD',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Guadeloupe',
-                'code' => 'GP'
+                'code' => 'GP',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Guam',
-                'code' => 'GU'
+                'code' => 'GU',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Guatemala',
-                'code' => 'GT'
+                'code' => 'GT',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Guernsey',
-                'code' => 'GG'
+                'code' => 'GG',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Guinea',
-                'code' => 'GN'
+                'code' => 'GN',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Guinea-Bissau',
-                'code' => 'GW'
+                'code' => 'GW',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Guyana',
-                'code' => 'GY'
+                'code' => 'GY',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Haiti',
-                'code' => 'HT'
+                'code' => 'HT',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Heard Island and McDonald Mcdonald Islands',
-                'code' => 'HM'
+                'code' => 'HM',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Holy See (Vatican City State)',
-                'code' => 'VA'
+                'code' => 'VA',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Honduras',
-                'code' => 'HN'
+                'code' => 'HN',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Hong Kong',
-                'code' => 'HK'
+                'code' => 'HK',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Hungary',
-                'code' => 'HU'
+                'code' => 'HU',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Iceland',
-                'code' => 'IS'
+                'code' => 'IS',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'India',
-                'code' => 'IN'
+                'code' => 'IN',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Indonesia',
-                'code' => 'ID'
+                'code' => 'ID',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Iran, Islamic Republic of',
-                'code' => 'IR'
+                'code' => 'IR',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Iraq',
-                'code' => 'IQ'
+                'code' => 'IQ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Ireland',
-                'code' => 'IE'
+                'code' => 'IE',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Isle of Man',
-                'code' => 'IM'
+                'code' => 'IM',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Israel',
-                'code' => 'IL'
+                'code' => 'IL',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Italy',
-                'code' => 'IT'
+                'code' => 'IT',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Jamaica',
-                'code' => 'JM'
+                'code' => 'JM',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Japan',
-                'code' => 'JP'
+                'code' => 'JP',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Jersey',
-                'code' => 'JE'
+                'code' => 'JE',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Jordan',
-                'code' => 'JO'
+                'code' => 'JO',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Kazakhstan',
-                'code' => 'KZ'
+                'code' => 'KZ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Kenya',
-                'code' => 'KE'
+                'code' => 'KE',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Kiribati',
-                'code' => 'KI'
+                'code' => 'KI',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Korea, Democratic People\'s Republic of',
-                'code' => 'KP'
+                'code' => 'KP',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Korea, Republic of',
-                'code' => 'KR'
+                'code' => 'KR',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Kuwait',
-                'code' => 'KW'
+                'code' => 'KW',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Kyrgyzstan',
-                'code' => 'KG'
+                'code' => 'KG',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Lao People\'s Democratic Republic',
-                'code' => 'LA'
+                'code' => 'LA',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Latvia',
-                'code' => 'LV'
+                'code' => 'LV',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Lebanon',
-                'code' => 'LB'
+                'code' => 'LB',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Lesotho',
-                'code' => 'LS'
+                'code' => 'LS',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Liberia',
-                'code' => 'LR'
+                'code' => 'LR',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Libya',
-                'code' => 'LY'
+                'code' => 'LY',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Liechtenstein',
-                'code' => 'LI'
+                'code' => 'LI',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Lithuania',
-                'code' => 'LT'
+                'code' => 'LT',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Luxembourg',
-                'code' => 'LU'
+                'code' => 'LU',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Macao',
-                'code' => 'MO'
+                'code' => 'MO',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Macedonia, the Former Yugoslav Republic of',
-                'code' => 'MK'
+                'code' => 'MK',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Madagascar',
-                'code' => 'MG'
+                'code' => 'MG',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Malawi',
-                'code' => 'MW'
+                'code' => 'MW',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Malaysia',
-                'code' => 'MY'
+                'code' => 'MY',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Maldives',
-                'code' => 'MV'
+                'code' => 'MV',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Mali',
-                'code' => 'ML'
+                'code' => 'ML',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Malta',
-                'code' => 'MT'
+                'code' => 'MT',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Marshall Islands',
-                'code' => 'MH'
+                'code' => 'MH',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Martinique',
-                'code' => 'MQ'
+                'code' => 'MQ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Mauritania',
-                'code' => 'MR'
+                'code' => 'MR',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Mauritius',
-                'code' => 'MU'
+                'code' => 'MU',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Mayotte',
-                'code' => 'YT'
+                'code' => 'YT',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Mexico',
-                'code' => 'MX'
+                'code' => 'MX',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Micronesia, Federated States of',
-                'code' => 'FM'
+                'code' => 'FM',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Moldova, Republic of',
-                'code' => 'MD'
+                'code' => 'MD',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Monaco',
-                'code' => 'MC'
+                'code' => 'MC',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Mongolia',
-                'code' => 'MN'
+                'code' => 'MN',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Montenegro',
-                'code' => 'ME'
+                'code' => 'ME',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Montserrat',
-                'code' => 'MS'
+                'code' => 'MS',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Morocco',
-                'code' => 'MA'
+                'code' => 'MA',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Mozambique',
-                'code' => 'MZ'
+                'code' => 'MZ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Myanmar',
-                'code' => 'MM'
+                'code' => 'MM',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Namibia',
-                'code' => 'NA'
+                'code' => 'NA',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Nauru',
-                'code' => 'NR'
+                'code' => 'NR',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Nepal',
-                'code' => 'NP'
+                'code' => 'NP',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Netherlands',
-                'code' => 'NL'
+                'code' => 'NL',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'New Caledonia',
-                'code' => 'NC'
+                'code' => 'NC',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'New Zealand',
-                'code' => 'NZ'
+                'code' => 'NZ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Nicaragua',
-                'code' => 'NI'
+                'code' => 'NI',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Niger',
-                'code' => 'NE'
+                'code' => 'NE',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Nigeria',
-                'code' => 'NG'
+                'code' => 'NG',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Niue',
-                'code' => 'NU'
+                'code' => 'NU',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Norfolk Island',
-                'code' => 'NF'
+                'code' => 'NF',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Northern Mariana Islands',
-                'code' => 'MP'
+                'code' => 'MP',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Norway',
-                'code' => 'NO'
+                'code' => 'NO',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Oman',
-                'code' => 'OM'
+                'code' => 'OM',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Pakistan',
-                'code' => 'PK'
+                'code' => 'PK',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Palau',
-                'code' => 'PW'
+                'code' => 'PW',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Palestine, State of',
-                'code' => 'PS'
+                'code' => 'PS',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Panama',
-                'code' => 'PA'
+                'code' => 'PA',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Papua New Guinea',
-                'code' => 'PG'
+                'code' => 'PG',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Paraguay',
-                'code' => 'PY'
+                'code' => 'PY',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Peru',
-                'code' => 'PE'
+                'code' => 'PE',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Philippines',
-                'code' => 'PH'
+                'code' => 'PH',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Pitcairn',
-                'code' => 'PN'
+                'code' => 'PN',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Poland',
-                'code' => 'PL'
+                'code' => 'PL',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Portugal',
-                'code' => 'PT'
+                'code' => 'PT',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Puerto Rico',
-                'code' => 'PR'
+                'code' => 'PR',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Qatar',
-                'code' => 'QA'
+                'code' => 'QA',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Réunion',
-                'code' => 'RE'
+                'code' => 'RE',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Romania',
-                'code' => 'RO'
+                'code' => 'RO',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Russian Federation',
-                'code' => 'RU'
+                'code' => 'RU',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Rwanda',
-                'code' => 'RW'
+                'code' => 'RW',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Saint Barthélemy',
-                'code' => 'BL'
+                'code' => 'BL',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Saint Helena, Ascension and Tristan da Cunha',
-                'code' => 'SH'
+                'code' => 'SH',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Saint Kitts and Nevis',
-                'code' => 'KN'
+                'code' => 'KN',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Saint Lucia',
-                'code' => 'LC'
+                'code' => 'LC',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Saint Martin (French part)',
-                'code' => 'MF'
+                'code' => 'MF',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Saint Pierre and Miquelon',
-                'code' => 'PM'
+                'code' => 'PM',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Saint Vincent and the Grenadines',
-                'code' => 'VC'
+                'code' => 'VC',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Samoa',
-                'code' => 'WS'
+                'code' => 'WS',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'San Marino',
-                'code' => 'SM'
+                'code' => 'SM',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Sao Tome and Principe',
-                'code' => 'ST'
+                'code' => 'ST',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Saudi Arabia',
-                'code' => 'SA'
+                'code' => 'SA',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Senegal',
-                'code' => 'SN'
+                'code' => 'SN',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Serbia',
-                'code' => 'RS'
+                'code' => 'RS',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Seychelles',
-                'code' => 'SC'
+                'code' => 'SC',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Sierra Leone',
-                'code' => 'SL'
+                'code' => 'SL',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Singapore',
-                'code' => 'SG'
+                'code' => 'SG',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Sint Maarten (Dutch part)',
-                'code' => 'SX'
+                'code' => 'SX',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Slovakia',
-                'code' => 'SK'
+                'code' => 'SK',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Slovenia',
-                'code' => 'SI'
+                'code' => 'SI',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Solomon Islands',
-                'code' => 'SB'
+                'code' => 'SB',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Somalia',
-                'code' => 'SO'
+                'code' => 'SO',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'South Africa',
-                'code' => 'ZA'
+                'code' => 'ZA',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'South Georgia and the South Sandwich Islands',
-                'code' => 'GS'
+                'code' => 'GS',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'South Sudan',
-                'code' => 'SS'
+                'code' => 'SS',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Spain',
-                'code' => 'ES'
+                'code' => 'ES',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Sri Lanka',
-                'code' => 'LK'
+                'code' => 'LK',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Sudan',
-                'code' => 'SD'
+                'code' => 'SD',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Suriname',
-                'code' => 'SR'
+                'code' => 'SR',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Svalbard and Jan Mayen',
-                'code' => 'SJ'
+                'code' => 'SJ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Swaziland',
-                'code' => 'SZ'
+                'code' => 'SZ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Sweden',
-                'code' => 'SE'
+                'code' => 'SE',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Switzerland',
-                'code' => 'CH'
+                'code' => 'CH',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Syrian Arab Republic',
-                'code' => 'SY'
+                'code' => 'SY',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Taiwan',
-                'code' => 'TW'
+                'code' => 'TW',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Tajikistan',
-                'code' => 'TJ'
+                'code' => 'TJ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Tanzania, United Republic of',
-                'code' => 'TZ'
+                'code' => 'TZ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Thailand',
-                'code' => 'TH'
+                'code' => 'TH',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Timor-Leste',
-                'code' => 'TL'
+                'code' => 'TL',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Togo',
-                'code' => 'TG'
+                'code' => 'TG',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Tokelau',
-                'code' => 'TK'
+                'code' => 'TK',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Tonga',
-                'code' => 'TO'
+                'code' => 'TO',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Trinidad and Tobago',
-                'code' => 'TT'
+                'code' => 'TT',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Tunisia',
-                'code' => 'TN'
+                'code' => 'TN',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Turkey',
-                'code' => 'TR'
+                'code' => 'TR',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Turkmenistan',
-                'code' => 'TM'
+                'code' => 'TM',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Turks and Caicos Islands',
-                'code' => 'TC'
+                'code' => 'TC',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Tuvalu',
-                'code' => 'TV'
+                'code' => 'TV',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Uganda',
-                'code' => 'UG'
+                'code' => 'UG',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Ukraine',
-                'code' => 'UA'
+                'code' => 'UA',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'United Arab Emirates',
-                'code' => 'AE'
+                'code' => 'AE',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'United Kingdom',
-                'code' => 'GB'
+                'code' => 'GB',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'United States',
-                'code' => 'US'
+                'code' => 'US',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'United States Minor Outlying Islands',
-                'code' => 'UM'
+                'code' => 'UM',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Uruguay',
-                'code' => 'UY'
+                'code' => 'UY',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Uzbekistan',
-                'code' => 'UZ'
+                'code' => 'UZ',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Vanuatu',
-                'code' => 'VU'
+                'code' => 'VU',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Venezuela, Bolivarian Republic of',
-                'code' => 'VE'
+                'code' => 'VE',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Viet Nam',
-                'code' => 'VN'
+                'code' => 'VN',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Virgin Islands, British',
-                'code' => 'VG'
+                'code' => 'VG',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Virgin Islands, U.S.',
-                'code' => 'VI'
+                'code' => 'VI',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Wallis and Futuna',
-                'code' => 'WF'
+                'code' => 'WF',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Western Sahara',
-                'code' => 'EH'
+                'code' => 'EH',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Yemen',
-                'code' => 'YE'
+                'code' => 'YE',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Zambia',
-                'code' => 'ZM'
+                'code' => 'ZM',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name' => 'Zimbabwe',
-                'code' => 'ZW'
+                'code' => 'ZW',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
         ];
 

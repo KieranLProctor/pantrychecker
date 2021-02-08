@@ -18,7 +18,7 @@
                                 </dt>
                                 <dd>
                                     <div class="text-lg font-medium text-gray-900">
-                                        £30,659.45
+                                        £{{ Auth::user()->totalItemsValue() }}
                                     </div>
                                 </dd>
                             </dl>
