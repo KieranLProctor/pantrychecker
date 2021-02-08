@@ -12,6 +12,40 @@ class ItemInfo extends Model
     use HasFactory;
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'user_id',
+        'item_id',
+        'purchase_date',
+        'expiration_date',
+        'retailer_id',
+        'purchase_price',
+        'location_id',
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'user_id',
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'purchase_date' => 'date',
+        'expiration_date' => 'date'
+    ];
+
+    /**
      * Return the location where the item is stored.
      *
      * @return BelongsTo
