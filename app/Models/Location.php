@@ -36,7 +36,7 @@ class Location extends Model
     }
 
     /**
-     * Get all of the items in a location.
+     * Get all of the item-infos in a location.
      *
      * @return HasMany
      */

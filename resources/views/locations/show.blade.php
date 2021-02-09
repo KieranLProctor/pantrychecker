@@ -57,7 +57,7 @@
                 <div class="flex justify-between">
                     <livewire:search-bar/>
                     <div class="float-right">
-                        <a href="{{ route('items.create') }}"
+                        <a href="{{ route('item-infos.create') }}"
                            class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">Add
                             Item</a>
                     </div>
@@ -99,7 +99,7 @@
                                     </tr>
                                     </thead>
                                     <tbody class="bg-white divide-y divide-gray-200">
-                                    @each('livewire.item-table', $location->items, 'item', 'livewire.item-table-empty')
+                                    @each('livewire.item-info-table-data', $location->items, 'itemInfo', 'livewire.item-info-table-empty')
                                     </tbody>
                                 </table>
                             </div>

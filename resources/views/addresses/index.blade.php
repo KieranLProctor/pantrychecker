@@ -1,15 +1,15 @@
 <x-app-layout>
     <x-slot name="header">
-        {{ __('Items') }}
+        {{ __('Addresses') }}
     </x-slot>
 
     <div class="py-4">
         <div class="flex justify-between">
             <livewire:search-bar/>
             <div class="float-right">
-                <a href="{{ route('items.create') }}"
+                <a href="{{ route('addresses.create') }}"
                    class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">Add
-                    Item</a>
+                    Address</a>
             </div>
         </div>
         <div class="flex flex-col">
@@ -21,37 +21,46 @@
                             <tr>
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Name
+                                    Street Address 1
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Location
+                                    Street Address 2
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Purchase Date
+                                    City
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Expiration Date
+                                    State
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Price
+                                    Country
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    SKU
+                                    Zipcode
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Longitude
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Latitude
                                 </th>
                                 <th scope="col" class="relative px-6 py-3">
-                                    <span class="sr-only">Edit</span>
+                                    <span class="sr-only">View</span>
                                 </th>
                             </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
-                            @each('livewire.item-table', $items, 'item', 'livewire.item-table-empty')
+                            @each('livewire.address-table-data', $addresses, 'address', 'livewire.address-table-empty')
                             </tbody>
                         </table>
+
                     </div>
                 </div>
             </div>

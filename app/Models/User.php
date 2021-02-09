@@ -61,7 +61,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * Return all of the users inventory items.
+     * Return all of the users inventory item-infos.
      *
      * @return HasMany
      */
@@ -69,11 +69,11 @@ class User extends Authenticatable
     {
         // TODO: Add the item information and location.
 
-        return $this->hasMany(Item::class);
+        return $this->hasMany(ItemInfo::class);
     }
 
     /**
-     * Return the total value of items stored.
+     * Return the total value of item-infos stored.
      *
      * @return int
      */

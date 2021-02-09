@@ -1,15 +1,15 @@
 <x-app-layout>
     <x-slot name="header">
-        {{ __('Companies') }}
+        {{ __('Items') }}
     </x-slot>
 
     <div class="py-4">
         <div class="flex justify-between">
             <livewire:search-bar/>
             <div class="float-right">
-                <a href="{{ route('companies.create') }}"
+                <a href="{{ route('item-infos.create') }}"
                    class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">Add
-                    Company</a>
+                    Item</a>
             </div>
         </div>
         <div class="flex flex-col">
@@ -25,30 +25,33 @@
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Description
+                                    Location
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Type
+                                    Purchase Date
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Website URL
+                                    Expiration Date
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Email
+                                    Price
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    SKU
                                 </th>
                                 <th scope="col" class="relative px-6 py-3">
-                                    <span class="sr-only">View</span>
+                                    <span class="sr-only">Edit</span>
                                 </th>
                             </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
-                            @each('livewire.company-table-data', $companies, 'company', 'livewire.company-table-empty')
+                            @each('livewire.item-info-table-data', $itemInfos, 'itemInfo', 'livewire.item-info-table-empty')
                             </tbody>
                         </table>
-
                     </div>
                 </div>
             </div>

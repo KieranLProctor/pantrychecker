@@ -15,7 +15,6 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
             $table->string('name');
             $table->unsignedBigInteger('item_type_id');
             $table->text('description')->nullable();
@@ -23,10 +22,6 @@ class CreateItemsTable extends Migration
             $table->unsignedBigInteger('size_id')->nullable();
             $table->string('sku')->nullable();
             $table->timestamps();
-
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users');
 
             $table->foreign('item_type_id')
                 ->references('id')

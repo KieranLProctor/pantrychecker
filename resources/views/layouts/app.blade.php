@@ -73,7 +73,7 @@
                             {{ __('Dashboard') }}
                         </x-jet-responsive-nav-link>
 
-                        <x-jet-responsive-nav-link href="{{ route('items.index') }}"
+                        <x-jet-responsive-nav-link href="{{ route('item-infos.index') }}"
                                                    :active="request()->routeIs('items.index')">
                             <x-heroicon-o-shopping-cart
                                 class="mr-4 h-6 w-6"/>
@@ -115,7 +115,7 @@
                             {{ __('Dashboard') }}
                         </x-jet-nav-link>
 
-                        <x-jet-nav-link href="{{ route('items.index') }}" :active="request()->routeIs('items.index')">
+                        <x-jet-nav-link href="{{ route('item-infos.index') }}" :active="request()->routeIs('items.index')">
                             <x-heroicon-o-shopping-cart class="mr-3 h-6 w-6"/>
                             {{ __('Items') }}
                         </x-jet-nav-link>

@@ -27,7 +27,7 @@
                 </div>
                 <div class="bg-gray-50 px-5 py-3">
                     <div class="text-sm">
-                        <a href="{{ route('items.index') }}" class="font-medium text-gray-700 hover:text-gray-900">
+                        <a href="{{ route('item-infos.index') }}" class="font-medium text-gray-700 hover:text-gray-900">
                             View all
                         </a>
                     </div>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="bg-gray-50 px-5 py-3">
                     <div class="text-sm">
-                        <a href="{{ route('items.index') }}" class="font-medium text-gray-700 hover:text-gray-900">
+                        <a href="{{ route('item-infos.index') }}" class="font-medium text-gray-700 hover:text-gray-900">
                             View all
                         </a>
                     </div>

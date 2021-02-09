@@ -1,7 +1,7 @@
 <x-app-layout>
     <div>
         <div class="mt-5 md:mt-0 w-1/2">
-            <form action="{{ route('items.store') }}" method="POST">
+            <form action="{{ route('item-infos.store') }}" method="POST">
                 @csrf
                 <div class="shadow sm:rounded-md sm:overflow-hidden">
                     <div class="px-4 py-5 bg-white space-y-6 sm:p-6">

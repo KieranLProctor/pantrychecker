@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Address;
 use App\Models\Company;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,11 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        //
+        // TODO: Add the other parts of the address but to a formatted result.
+
+        $addresses = Address::all(['id', 'street_address_1']);
+
+        return view('companies.create', ['addresses' => $addresses]);
     }
 
     /**
@@ -37,7 +42,13 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+
+        ]);
+
+        Company::create($request->all());
+
+        return redirect()->route('companies.index');
     }
 
     /**

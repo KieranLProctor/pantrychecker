@@ -11,6 +11,30 @@ class Item extends Model
     use HasFactory;
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'user_id',
+        'name',
+        'item_type_id',
+        'description',
+        'company_id',
+        'size_id',
+        'sku',
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'user_id',
+    ];
+
+    /**
      * Return all information about the item.
      *
      * @return HasOne
