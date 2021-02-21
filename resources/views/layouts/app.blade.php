@@ -115,7 +115,8 @@
                             {{ __('Dashboard') }}
                         </x-jet-nav-link>
 
-                        <x-jet-nav-link href="{{ route('item-infos.index') }}" :active="request()->routeIs('items.index')">
+                        <x-jet-nav-link href="{{ route('item-infos.index') }}"
+                                        :active="request()->routeIs('items.index')">
                             <x-heroicon-o-shopping-cart class="mr-3 h-6 w-6"/>
                             {{ __('Items') }}
                         </x-jet-nav-link>
@@ -218,11 +219,9 @@
                                 </div>
 
                                 <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                                    <div class="flex flex-row items-center">
-                                        <x-heroicon-o-user
-                                            class="w-5 h-5 mr-3 text-gray-400 dark:text-gray-300 dark:hover-text-white"/>
-                                        {{ __('Profile') }}
-                                    </div>
+                                    <x-heroicon-o-user
+                                        class="w-5 h-5 mr-3 text-gray-400 dark:text-gray-300 group-hover:text-gray-500 dark:group-hover-text-white"/>
+                                    {{ __('Profile') }}
                                 </x-jet-dropdown-link>
 
                                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
@@ -271,11 +270,10 @@
 
                                     <x-jet-dropdown-link href="{{ route('logout') }}" onclick="event.preventDefault();
                                                             this.closest('form').submit();">
-                                        <div class="flex flex-row items-center">
-                                            <x-heroicon-o-logout class="w-5 h-5 mr-3 text-gray-400"/>
+                                        <x-heroicon-o-logout
+                                            class="w-5 h-5 mr-3 text-gray-400 group-hover:text-gray-500 dark:group-hover-text-white"/>
 
-                                            {{ __('Logout') }}
-                                        </div>
+                                        {{ __('Logout') }}
                                     </x-jet-dropdown-link>
                                 </form>
                             </x-slot>
