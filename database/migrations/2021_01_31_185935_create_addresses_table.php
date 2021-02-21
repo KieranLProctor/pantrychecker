@@ -18,20 +18,12 @@ class CreateAddressesTable extends Migration
             $table->string('street_address_1');
             $table->string('street_address_2')->nullable();
             $table->string('city');
-            $table->unsignedBigInteger('state_id')->nullable();
-            $table->unsignedBigInteger('country_id');
+            $table->foreignId('state_id')->nullable()->constrained();
+            $table->foreignId('country_id')->nullable()->constrained();
             $table->string('zipcode');
             $table->string('longitude');
             $table->string('latitude');
             $table->timestamps();
-
-            $table->foreign('state_id')
-                ->references('id')
-                ->on('states');
-
-            $table->foreign('country_id')
-                ->references('id')
-                ->on('countries');
         });
     }
 

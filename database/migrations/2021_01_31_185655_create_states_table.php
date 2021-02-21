@@ -17,12 +17,8 @@ class CreateStatesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('code');
-            $table->unsignedBigInteger('country_id');
+            $table->foreignId('country_id')->constrained();
             $table->timestamps();
-
-            $table->foreign('country_id')
-                ->references('id')
-                ->on('countries');
         });
     }
 

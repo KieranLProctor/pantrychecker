@@ -21,12 +21,8 @@ class CreateCompaniesTable extends Migration
             $table->string('type');
             $table->string('website_url')->nullable();
             $table->string('email')->nullable();
-            $table->unsignedBigInteger('address_id');
+            $table->foreignId('address_id')->constrained();
             $table->timestamps();
-
-            $table->foreign('address_id')
-                ->references('id')
-                ->on('addresses');
         });
     }
 

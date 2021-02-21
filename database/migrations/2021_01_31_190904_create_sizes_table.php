@@ -20,12 +20,8 @@ class CreateSizesTable extends Migration
             $table->decimal('width', 2)->nullable();
             $table->decimal('height', 2)->nullable();
             $table->decimal('volume', 2)->nullable();
-            $table->unsignedBigInteger('shape_id');
+            $table->foreignId('shape_id')->constrained();
             $table->timestamps();
-
-            $table->foreign('shape_id')
-                ->references('id')
-                ->on('shapes');
         });
     }
 

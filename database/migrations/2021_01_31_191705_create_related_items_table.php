@@ -15,17 +15,9 @@ class CreateRelatedItemsTable extends Migration
     {
         Schema::create('related_items', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('item_id');
-            $table->unsignedBigInteger('related_item_id');
+            $table->foreignId('item_id')->constrained();
+            $table->foreignId('related_item_id')->constrained();
             $table->timestamps();
-
-            $table->foreign('item_id')
-                ->references('id')
-                ->on('items');
-
-            $table->foreign('related_item_id')
-                ->references('id')
-                ->on('items');
         });
     }
 

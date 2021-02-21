@@ -16,24 +16,12 @@ class CreateItemsTable extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->unsignedBigInteger('item_type_id');
+            $table->foreignId('item_type_id')->constrained();
             $table->text('description')->nullable();
-            $table->unsignedBigInteger('company_id');
-            $table->unsignedBigInteger('size_id')->nullable();
+            $table->foreignId('company_id')->constrained();
+            $table->foreignId('size_id')->nullable()->constrained();
             $table->string('sku')->nullable();
             $table->timestamps();
-
-            $table->foreign('item_type_id')
-                ->references('id')
-                ->on('item_types');
-
-            $table->foreign('company_id')
-                ->references('id')
-                ->on('companies');
-
-            $table->foreign('size_id')
-                ->references('id')
-                ->on('sizes');
         });
     }
 
