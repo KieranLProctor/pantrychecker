@@ -24,29 +24,11 @@ Route::view('/', 'welcome');
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::view('/dashboard', 'pages.dashboard')->name('pages.dashboard');
 
-    Route::get('/addresses', [AddressController::class, 'index'])->name('addresses.index');
-    Route::get('/addresses/create', [AddressController::class, 'create'])->name('addresses.create');
-    Route::post('/addresses', [AddressController::class, 'store'])->name('addresses.store');
-    Route::get('/addresses/{address}', [AddressController::class, 'show'])->name('addresses.show');
-    Route::get('/addresses/{address}/edit', [AddressController::class, 'edit'])->name('addresses.edit');
-    Route::patch('/addresses/{address}', [AddressController::class, 'update'])->name('addresses.update');
-    Route::delete('/addresses/{address}', [AddressController::class, 'destroy'])->name('addresses.destroy');
+    Route::resource('/addresses', AddressController::class);
 
-    Route::get('/companies', [CompanyController::class, 'index'])->name('companies.index');
-    Route::get('/companies/create', [CompanyController::class, 'create'])->name('companies.create');
-    Route::post('/companies', [CompanyController::class, 'store'])->name('companies.store');
-    Route::get('/companies/{company}', [CompanyController::class, 'show'])->name('companies.show');
-    Route::get('/companies/{company}/edit', [CompanyController::class, 'edit'])->name('companies.edit');
-    Route::patch('/companies/{company}', [CompanyController::class, 'update'])->name('companies.update');
-    Route::delete('/companies/{company}', [CompanyController::class, 'destroy'])->name('companies.destroy');
+    Route::resource('/companies', CompanyController::class);
 
-    Route::get('/items', [ItemController::class, 'index'])->name('items.index');
-    Route::get('/items/create', [ItemController::class, 'create'])->name('items.create');
-    Route::post('/items', [ItemController::class, 'store'])->name('items.store');
-    Route::get('/items/{item}', [ItemController::class, 'show'])->name('items.show');
-    Route::get('/items/{item}/edit', [ItemController::class, 'edit'])->name('items.edit');
-    Route::patch('/items/{item}', [ItemController::class, 'update'])->name('items.update');
-    Route::delete('/items/{item}', [ItemController::class, 'destroy'])->name('items.destroy');
+    Route::resource('/items', ItemController::class);
 
     Route::prefix('inventory')->group(function () {
         Route::get('/items', [ItemInfoController::class, 'index'])->name('item-infos.index');

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\DB;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
@@ -19,22 +20,12 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'name',
         'email',
         'password',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
     protected $hidden = [
         'password',
         'remember_token',
@@ -42,65 +33,45 @@ class User extends Authenticatable
         'two_factor_secret',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
 
-    /**
-     * The accessors to append to the model's array form.
-     *
-     * @var array
-     */
     protected $appends = [
         'profile_photo_url',
     ];
 
-    /**
-     * Return all of the users inventory item-infos.
-     *
-     * @return HasMany
-     */
-    public function items()
+    public function items(): HasMany
     {
         // TODO: Add the item information and location.
 
         return $this->hasMany(ItemInfo::class);
     }
 
-    /**
-     * Return the total value of item-infos stored.
-     *
-     * @return int
-     */
-    public function totalItemsValue()
-    {
-        return $this->hasMany(ItemInfo::class)->sum('purchase_price');
-    }
-
-    /**
-     * Return all of the inventory locations for the user.
-     *
-     * @return HasMany
-     */
-    public function locations()
+    public function locations(): HasMany
     {
         return $this->hasMany(Location::class);
     }
 
-    /**
-     * Return all of the notifications related to the user.
-     *
-     * @return HasMany
-     */
-    public function notifications()
+    public function notifications(): HasMany
     {
         // TODO: Make a migration and then handle this to return data from it.
 
         return [];
+    }
+
+    public function getTotalItemsAttribute()
+    {
+        return $this->with(ItemInfo::class)->count();
+    }
+
+    public function getTotalItemsValueAttribute()
+    {
+        return $this->items->sum('purchase_price');
+    }
+
+    public function getTotalLocationsAttribute()
+    {
+        return $this->with(Location::class)->count();
     }
 }
