@@ -4,17 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Item extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'user_id',
         'name',
@@ -25,31 +21,16 @@ class Item extends Model
         'sku',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
     protected $hidden = [
         'user_id',
     ];
 
-    /**
-     * Return all information about the item.
-     *
-     * @return HasOne
-     */
-    public function information()
+    public function information(): HasOne
     {
         return $this->hasOne(ItemInfo::with('inventory_locations'));
     }
 
-    /**
-     * Return all of the locations that have this item.
-     *
-     * @return HasManyThrough
-     */
-    public function locations()
+    public function locations(): HasManyThrough
     {
         return $this->hasManyThrough(Location::class, ItemInfo::class);
     }

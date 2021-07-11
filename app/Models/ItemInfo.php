@@ -11,11 +11,6 @@ class ItemInfo extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'user_id',
         'item_id',
@@ -26,39 +21,21 @@ class ItemInfo extends Model
         'location_id',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
     protected $hidden = [
         'user_id',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
     protected $casts = [
         'purchase_date' => 'date',
         'expiration_date' => 'date'
     ];
 
-    /**
-     * Return the location where the item is stored.
-     *
-     * @return BelongsTo
-     */
-    public function location()
+    public function location(): BelongsTo
     {
         return $this->belongsTo(Location::class);
     }
 
-    /**
-     * Return the product that this item is of.
-     */
-    public function product()
+    public function product(): BelongsTo
     {
         return $this->belongsTo(Item::class);
     }

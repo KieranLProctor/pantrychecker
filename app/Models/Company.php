@@ -9,11 +9,6 @@ class Company extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'name',
         'logo_url',
@@ -24,11 +19,6 @@ class Company extends Model
         'address_id',
     ];
 
-    /**
-     * Return the company address in JSON format.
-     *
-     * @return
-     */
     public function address()
     {
 

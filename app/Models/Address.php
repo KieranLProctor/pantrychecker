@@ -10,11 +10,6 @@ class Address extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'street_address_1',
         'street_address_2',
@@ -26,21 +21,12 @@ class Address extends Model
         'latitude',
     ];
 
-    /**
-     * Return the country this address is in.
-     *
-     * @return BelongsTo
-     */
-    public function country()
+    public function country(): BelongsTo
     {
         return $this->belongsTo(Country::class);
     }
 
-    /**
-     * Return the state that this address is in.
-     * @return BelongsTo
-     */
-    public function state()
+    public function state(): BelongsTo
     {
         return $this->belongsTo(State::class);
     }
