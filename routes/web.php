@@ -2,10 +2,13 @@
 
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\CountryController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\ItemInfoController;
 use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\ShapeController;
+use App\Http\Controllers\SizeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,11 +25,9 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'welcome');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
-    Route::view('/dashboard', 'pages.dashboard')->name('pages.dashboard');
-
-    Route::resource('/addresses', AddressController::class);
-
-    Route::resource('/companies', CompanyController::class);
+    Route::get('/dashboard', function() {
+       return view('pages.dashboard', ['user' => Auth::user()]);
+    })->name('pages.dashboard');
 
     Route::resource('/items', ItemController::class);
 
@@ -50,4 +51,17 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     Route::get('/notifications', [NotificationController::class, 'index'])->name('notifications.index');
     Route::get('/notifications/{notification}', [NotificationController::class, 'show'])->name('notifications.show');
+
+    Route::prefix('admin')->group(function () {
+        Route::resource('/addresses', AddressController::class);
+
+        Route::resource('/companies', CompanyController::class);
+
+        Route::resource('/countries', CountryController::class);
+
+        Route::resource('/shapes', ShapeController::class);
+
+        Route::resource('/sizes', SizeController::class);
+    });
 });
+
