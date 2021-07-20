@@ -11,35 +11,21 @@ use Illuminate\Support\Facades\Auth;
 
 class LocationController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Response
-     */
-    public function index()
+
+
+    public function index(): Response
     {
         $locations = User::find(Auth::id())->locations;
 
         return view('locations.index', ['locations' => $locations]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
+    public function create(): Response
     {
         return view('locations.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param Request $request
-     * @return RedirectResponse
-     */
-    public function store(Request $request)
+    public function store(Request $request): Response
     {
         $validated = $request->validate([
             'name' => ['required', 'max:50'],
@@ -55,47 +41,22 @@ class LocationController extends Controller
         return redirect()->route('locations.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param Location $location
-     * @return Response
-     */
-    public function show(Location $location)
+    public function show(Location $location): Response
     {
         return view('locations.show', ['location' => $location]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param Location $location
-     * @return Response
-     */
-    public function edit(Location $location)
+    public function edit(Location $location): Response
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param Request $request
-     * @param Location $location
-     * @return Response
-     */
-    public function update(Request $request, Location $location)
+    public function update(Request $request, Location $location): Response
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param Location $location
-     * @return Response
-     */
-    public function destroy(Location $location)
+    public function destroy(Location $location): Response
     {
         //
     }

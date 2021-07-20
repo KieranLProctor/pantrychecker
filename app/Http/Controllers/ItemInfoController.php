@@ -13,24 +13,14 @@ use Illuminate\Support\Facades\Auth;
 
 class ItemInfoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Response
-     */
-    public function index()
+    public function index(): Response
     {
         $items = User::find(Auth::id())->items;
 
         return view('item-infos.index', ['itemInfos' => $items]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
+    public function create(): Response
     {
         $items = Item::all(['id', 'name']);
         $companies = Company::all(['id', 'name']);
@@ -44,13 +34,7 @@ class ItemInfoController extends Controller
             ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return Response
-     */
-    public function store(Request $request)
+    public function store(Request $request): Response
     {
         $validated = $request->validate([
             'name' => ['required', 'max:50'],
@@ -70,47 +54,22 @@ class ItemInfoController extends Controller
         return redirect()->route('item-infos.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Item  $item
-     * @return Response
-     */
-    public function show(ItemInfo $itemInfo)
+    public function show(ItemInfo $itemInfo): Response
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Item  $item
-     * @return Response
-     */
-    public function edit(ItemInfo $itemInfo)
+    public function edit(ItemInfo $itemInfo): Response
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Item  $item
-     * @return Response
-     */
-    public function update(Request $request, ItemInfo $itemInfo)
+    public function update(Request $request, ItemInfo $itemInfo): Response
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Item  $item
-     * @return Response
-     */
-    public function destroy(ItemInfo $itemInfo)
+    public function destroy(ItemInfo $itemInfo): Response
     {
         //
     }

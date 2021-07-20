@@ -7,27 +7,18 @@ use App\Models\Country;
 use App\Models\State;
 use Dotenv\Validator;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class AddressController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function index(): Response
     {
         $addresses = Address::all();
 
         return view('addresses.index', ['addresses' => $addresses]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function create(): Response
     {
         $states = State::all(['id', 'name']);
         $countries = Country::all(['id', 'name']);
@@ -38,13 +29,7 @@ class AddressController extends Controller
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store(Request $request): Response
     {
         $validated = $request->validate([
             'street_address_1' => ['required', 'max:255'],
@@ -61,47 +46,22 @@ class AddressController extends Controller
         return redirect()->route('addresses.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param \App\Models\Address $address
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Address $address)
+    public function show(Address $address): Response
     {
         return view('addresses.show', ['address' => $address]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param \App\Models\Address $address
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Address $address)
+    public function edit(Address $address): Response
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Models\Address $address
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Address $address)
+    public function update(Request $request, Address $address): Response
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param \App\Models\Address $address
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Address $address)
+    public function destroy(Address $address): Response
     {
         //
     }
